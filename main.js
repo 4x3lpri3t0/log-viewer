@@ -22,59 +22,103 @@ const nano = require("nano")("http://admin:admin@127.0.0.1:5984"); // Not for pr
 // });
 
 var config = require("./config").config;
-var sys = require("sys");
 // couchdb = require("./lib/node-couchdb-min/couchdb"),
 // parser = require("./log-parser");
 
+// TODO: I NEED THIS
+// await checkDatabaseExists(async function () {
+//   const logsDatabase = nano.db.use(config.couch_db_name);
+//   await logsDatabase
+//     .insert({ foo: "bar" })
+//     .then((response) => {
+//       // p.process ... // TODO
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       throw err;
+//     });
+
+//   var debug = false;
+//   if (debug) parser.setDebug(debug);
+// });
+
 var init = async function () {
-  // var logsDB = new couchdb.Db(config.couch_db_name);
-  // await nano.db
-  //   .create("test")
-  //   .then((data) => {
-  //     console.log(data);
-  //   })
-  //   .catch((err) => {
-  //     console.log(err);
-  //     console.log("Is CouchDB running locally?");
-  //     throw err;
-  //   });
-
-  const logsTable = nano.db.use("test"); // TODO: logs
-  await logsTable.insert({ foo: "bar" }).then((response) => {
-    console.log(response);
-    // p.process ...
-  });
-
-  var debug = false;
-  if (debug) parser.setDebug(debug);
+  await nano.db
+    .get(config.couch_db_name)
+    .catch((err) => {
+      if (err.error == "not_found") {
+        nano.db.create(config.couch_db_name);
+      } else {
+        console.log(err);
+        console.log("Is CouchDB running locally?");
+        throw err;
+      }
+    })
+    .finally(() => {
+      console.log(config.couch_db_name + " database ready to be used.");
+      parser.processLogs(config.file, parser.logParser, saveToDatabase);
+    });
 };
 
-var couchdb_save_func = function (logs) {
-  if (debug) {
-    sys.puts("Processing " + logs.length + " logs");
+var saveToDatabase = async function (sessions) {
+  console.log("Processing " + sessions.length + " sessions");
+
+  for (var i = 0; i < sessions.length; i++) {
+    console.log(
+      "Processing " +
+        sessions[i].length +
+        " logs for session " +
+        (i + 1) +
+        " of " +
+        sessions.length
+    );
+
+    // TODO: Pass DB in a better way
+    const logsDatabase = nano.db.use(config.couch_db_name);
+
+    // TODO: Batch insert
+    for (const log of sessions[i]) {
+      await logsDatabase
+        .insert(log)
+        .then((response) => {
+          // p.process ... // TODO
+          console.log(response);
+        })
+        .catch((err) => {
+          console.log(err);
+          throw err;
+        });
+    }
+
+    // logsDB.put(uuid, log, function (err, result) {
+    //   if (err) return sys.error(err.stack);
+    //   if (debug)
+    //     sys.log(
+    //       "Created doc at " + uuid + " with --> " + sys.inspect(result)
+    //     );
+    // });
   }
 
-  logsDB.get("/_uuids?count=" + logs.length, function (err, result) {
-    if (err) {
-      return sys.error(err.stack);
-    }
+  // logsDB.get("/_uuids?count=" + logs.length, function (err, result) {
+  //   if (err) {
+  //     return sys.error(err.stack);
+  //   }
 
-    var uuids = result.uuids;
+  //   var uuids = result.uuids;
 
-    for (var i = 0, l = logs.length; i < l; i++) {
-      var uuid = uuids[i];
-      var log = logs[i];
+  //   for (var i = 0, l = logs.length; i < l; i++) {
+  //     var uuid = uuids[i];
+  //     var log = logs[i];
 
-      logsDB.put(uuid, log, function (err, result) {
-        if (err) return sys.error(err.stack);
-        if (debug)
-          sys.log(
-            "Created doc at " + uuid + " with --> " + sys.inspect(result)
-          );
-      });
-    }
-  });
+  //     logsDB.put(uuid, log, function (err, result) {
+  //       if (err) return sys.error(err.stack);
+  //       if (debug)
+  //         sys.log(
+  //           "Created doc at " + uuid + " with --> " + sys.inspect(result)
+  //         );
+  //     });
+  //   }
+  // });
 };
 
 init();
-// parser.process_logs(config.file, parser.logParser, couchdb_save_func);

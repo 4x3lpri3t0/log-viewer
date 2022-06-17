@@ -20,6 +20,10 @@ A log entry contains a timestamp, file, line, function, and a blob of text (that
 - [ ] for a certain amount of sessions (let's say the amount is dictated between 2 dates/times), we would like to see the top 10 most occurring log entries and the top 10 entries that occur most across all sessions
 - [ ] we would like to see entries that are new since a certain date/time, so the first occurrence of that log entry should be after that specific date/time. The error cannot have occurred before the given date/time
 
+# TODO
+- [ ] Parallelize the parsing of the log files.
+- [ ] Batch insert to CouchDB.
+
 # My NOTES:
 
 Log breakdown:
@@ -36,7 +40,9 @@ Log breakdown:
 
 # CouchDB locally
 
-Installation guide: https://docs.couchdb.org/en/3.2.0/setup/single-node.html
+Requirements:
+* CouchDB
+  - Installation guide: https://docs.couchdb.org/en/3.2.0/install/index.html
 
 Check DB status after install:
 ```sh

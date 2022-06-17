@@ -1,21 +1,22 @@
 #!/usr/bin/env node
 
-var fs = require("fs"),
-  sys = require("sys");
-var debug = false;
+const fs = require("fs");
+const sys = require("sys");
+const debug = false;
 
-/*
- * Parsers
- */
 exports.logParser = function (msg, index) {
-  var request = {};
   // DEBUG:: Comment this out to ease debugging as it can get noisy
-  request.full_log = msg;
-  var lines = msg.split(/\n/),
-    line = null;
+  // request.full_log = msg;
+
+  const lines = msg.split(/\n/);
+  let logs = [];
+  let log = {};
+  let line = null;
 
   while ((line = lines.shift()) !== undefined) {
-    if (line === "") continue;
+    if (line === "") {
+      continue;
+    }
 
     // - Date
     // - File
@@ -39,23 +40,25 @@ exports.logParser = function (msg, index) {
       //   };
 
       tmp = line.match(/((?<=\[).+?(?=\]))/g);
-      request["date"] = tmp[0];
+      log["date"] = tmp[0];
       metadata = tmp[1].split(/\s+/);
-      request["file"] = metadata[0];
-      request["line"] = metadata[1];
-      request["function"] = metadata[2];
+      log["file"] = metadata[0];
+      log["line"] = metadata[1];
+      log["function"] = metadata[2];
       text = line.split("]: ")[1];
       if (!text) {
         throw new Error("Text is undefined for log with date: " + tmp[0]);
       }
-      request["text"] = text;
+      log["text"] = text;
     } else {
       // TODO: Probably a blob message part of previous log. Needs to be appended to previous log text.
       //   throw new Error("Unhandled log type: " + tmp[1]);
     }
 
-    console.log(request["date"]);
-    console.log(request["text"]);
+    // console.log(log["date"]);
+    // console.log(log["text"]);
+
+    logs.push(log);
 
     // if (line === "") continue;
     // // Controller, Action, Format, IP, Date, Method
@@ -168,29 +171,31 @@ exports.logParser = function (msg, index) {
     // }
   }
 
-  if (request) {
-    if (exports.isDebug()) {
-      sys.puts(sys.inspect(request));
-      sys.puts("\n");
-    }
+  return logs;
 
-    return request;
-    // return false;
-  } else {
-    if (exports.isDebug()) {
-      sys.puts("\nERROR:: Could not process log message:\n\n");
-      sys.puts(sys.inspect(request.full_log));
-      sys.puts("\n");
-    }
-    return false;
-  }
+  // if (request) {
+  //   if (exports.isDebug()) {
+  //     sys.puts(sys.inspect(request));
+  //     sys.puts("\n");
+  //   }
+
+  //   return request;
+  //   // return false;
+  // } else {
+  //   if (exports.isDebug()) {
+  //     sys.puts("\nERROR:: Could not process log message:\n\n");
+  //     sys.puts(sys.inspect(request.full_log));
+  //     sys.puts("\n");
+  //   }
+  //   return false;
+  // }
 };
 
 /*
  * Parser Dispatcher
  */
 // Takes file path, log process function and save log function
-exports.process_logs = function (file, process_func, save_func) {
+exports.processLogs = function (file, parserFunction, saveFunction) {
   fs.readFile(file, "utf8", function (read_error, content) {
     var logs = [];
     if (read_error) {
@@ -204,9 +209,12 @@ exports.process_logs = function (file, process_func, save_func) {
       .replace(/^\*\*\s+vote_fu[^\n]+/, "")
       .split(/\n{3,}/)
       .forEach(function (msg, index) {
-        if ((tmp = process_func(msg, index))) logs.push(tmp);
+        if ((tmp = parserFunction(msg, index))) {
+          logs.push(tmp);
+        }
       });
-    save_func(logs);
+
+    saveFunction(logs);
   });
 };
 
