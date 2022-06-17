@@ -6,12 +6,12 @@ const TerserPlugin = require("terser-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = (env) => {
-  const base_url = env.prod ? "/couchdb-react-boilerplate/" : "/";
+  const base_url = "/";
 
   return {
     entry: "./src/index.jsx",
     devServer: { historyApiFallback: true },
-    mode: env.prod ? "production" : "development",
+    mode: "development",
     module: {
       rules: [
         {
@@ -40,9 +40,6 @@ module.exports = (env) => {
           },
         },
       ],
-    },
-    optimization: env.prod && {
-      minimizer: [new TerserPlugin()],
     },
     plugins: [
       new HtmlWebPackPlugin({
