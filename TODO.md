@@ -24,7 +24,7 @@ A log entry contains a timestamp, file, line, function, and a blob of text (that
 
 Log breakdown:
 
-- Timestamp
+- Date
 - File
 - Line
 - Function
