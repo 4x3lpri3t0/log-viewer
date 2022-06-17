@@ -34,26 +34,43 @@ Log breakdown:
 - Session date (end?)
 - Session duration
 
-# CouchDB
+# CouchDB locally
 
+Installation guide: https://docs.couchdb.org/en/3.2.0/setup/single-node.html
+
+Check DB status after install:
 ```sh
-helm repo add couchdb https://apache.github.io/couchdb-helm
-
-helm install couchdb couchdb/couchdb \
-  --set couchdbConfig.couchdb.uuid=$(curl https://www.uuidgenerator.net/api/version4 2>/dev/null | tr -d -)
-
-kubectl get pods --namespace default -l "app=couchdb,release=couchdb"
-
-kubectl exec --namespace default couchdb-couchdb-0 -c couchdb -- \
-    curl -s \
-    http://127.0.0.1:5984/_cluster_setup \
-    -X POST \
-    -H "Content-Type: application/json" \
-    -d '{"action": "finish_cluster"}'
+$ curl -X GET http://admin:admin@127.0.0.1:5984/_users
 ```
 
 # NPM
 
 ```sh
-npm ci
+$ npm ci
+```
+
+# CouchDB on k8s
+
+Requirements:
+* Docker
+* Minkube
+* Kubectl
+* Helm
+
+```sh
+$ helm repo add couchdb https://apache.github.io/couchdb-helm
+
+$ helm install couchdb couchdb/couchdb --values kubernetes/helm/couchdb-values.yaml \
+  --set allowAdminParty=true \
+  --set couchdbConfig.couchdb.uuid=$(curl https://www.uuidgenerator.net/api/versio
+n4 2>/dev/null | tr -d -)
+
+$ kubectl get pods --namespace default -l "app=couchdb,release=couchdb"
+
+$ kubectl exec --namespace default couchdb-couchdb-0 -c couchdb -- \
+    curl -s \
+    http://127.0.0.1:5984/_cluster_setup \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -d '{"action": "finish_cluster"}'
 ```

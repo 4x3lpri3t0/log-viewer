@@ -1,6 +1,6 @@
 // const couchdb = require("./couchdb"),
 const parser = require("./log-parser");
-const nano = require("nano")("http://localhost:5984");
+const nano = require("nano")("http://admin:admin@127.0.0.1:5984"); // Not for production use :)
 
 // var cdb = new couchdb.Db("logs");
 
@@ -28,20 +28,22 @@ var sys = require("sys");
 
 var init = async function () {
   // var logsDB = new couchdb.Db(config.couch_db_name);
-  nano.db
-    .create("test")
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((err) => {
-      console.log(err);
-      console.log("Is CouchDB running locally?");
-      throw err;
-    });
+  // await nano.db
+  //   .create("test")
+  //   .then((data) => {
+  //     console.log(data);
+  //   })
+  //   .catch((err) => {
+  //     console.log(err);
+  //     console.log("Is CouchDB running locally?");
+  //     throw err;
+  //   });
 
   const logsTable = nano.db.use("test"); // TODO: logs
-  const response = await logsTable.insert({ happy: true }, "rabbit");
-  console.log(response);
+  await logsTable.insert({ foo: "bar" }).then((response) => {
+    console.log(response);
+    // p.process ...
+  });
 
   var debug = false;
   if (debug) parser.setDebug(debug);
@@ -75,4 +77,4 @@ var couchdb_save_func = function (logs) {
 };
 
 init();
-parser.process_logs(config.file, parser.logParser, couchdb_save_func);
+// parser.process_logs(config.file, parser.logParser, couchdb_save_func);

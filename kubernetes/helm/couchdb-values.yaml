@@ -1,0 +1,16 @@
+## clusterSize is the initial size of the CouchDB cluster.
+clusterSize: 1
+
+## If allowAdminParty is enabled the cluster will start up without any database
+## administrator account; i.e., all users will be granted administrative
+## access. Otherwise, the system will look for a Secret called
+## <ReleaseName>-couchdb containing `adminUsername`, `adminPassword` and
+## `cookieAuthSecret` keys. See the `createAdminSecret` flag.
+## ref: https://kubernetes.io/docs/concepts/configuration/secret/
+allowAdminParty: true
+
+## The CouchDB image
+image:
+  repository: couchdb
+  tag: 2.3.1
+  pullPolicy: IfNotPresent
