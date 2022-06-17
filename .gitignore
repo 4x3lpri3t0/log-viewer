@@ -5,5 +5,14 @@ tmp
 .*.swo
 *.pid
 
-# Dependency directories
-node_modules/
+# NPM dependencies
+node_modules
+
+# Etc
+build
+dist
+local_db
+coverage
+npm-debug.log
+.env
+.DS_Store
