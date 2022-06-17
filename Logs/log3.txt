@@ -1,0 +1,535 @@
+[24-07-2017 21:02:15:595][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputManager.cpp 488 ls::InputManager::RegisterDevice]: Input device connected: 0
+[24-07-2017 21:02:15:596][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputManager.cpp 488 ls::InputManager::RegisterDevice]: Input device connected: 1
+[24-07-2017 21:02:15:701][D:\Develop\Dev\LSProjects\Framework\Code\GameNet\AddressManager.cpp 304 net::AddressManager::AddAddress]: 
+[PeerID]   [Type]       [Address]                 [GUID]                [UserID]
+  0        Local        172.16.11.5:4600          14371735127407934563  
+
+[24-07-2017 21:02:15:701][D:\Develop\Dev\LSProjects\Framework\Code\GameNet\AbstractPeer.cpp 2070 net::AbstractPeer::BindSocket]: Binding socket to port 4600 ... RAKNET_STARTED
+[24-07-2017 21:02:15:773][D:\Develop\Dev\LSProjects\Framework\Code\GameNet\AddressManager.cpp 304 net::AddressManager::AddAddress]: 
+[PeerID]   [Type]       [Address]                 [GUID]                [UserID]
+  0        Local        172.16.11.5:5384          14408525808675587570  
+
+[24-07-2017 21:02:15:773][D:\Develop\Dev\LSProjects\Framework\Code\GameNet\AbstractPeer.cpp 2070 net::AbstractPeer::BindSocket]: Binding socket to port 5384 ... RAKNET_STARTED
+[24-07-2017 21:02:33:052][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\FileManager.cpp 229 ls::FileManager::OpenFile]: Trying to open file for read 'D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/LinearizeDepth.bshd' while it doesn't exist!
+[24-07-2017 21:02:35:385][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\FileReader.cpp 72 ls::FileReader::Load]: Failed to open file 'D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/LinearizeDepth.bshd'!
+[24-07-2017 21:02:36:477][D:\Develop\Dev\LSProjects\Framework\Code\RenderFramework\RendererCommands.cpp 1487 rf::DataLoaderAddShaderCommand::Init]: Couldn't load Shader: "D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/LinearizeDepth.bshd"
+[24-07-2017 21:02:38:304][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourceManager.cpp 1640 ls::ResourceManager::InstantiateShader]: Instantiate shader with name "D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/LinearizeDepth.bshd" has failed
+[24-07-2017 21:02:38:904][D:\Develop\Dev\LSProjects\Framework\Code\RenderFramework\StageGroup.cpp 26 rf::StageGroup::AddAppStage]: AppStage failed to load!
+[24-07-2017 21:02:39:830][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\FileManager.cpp 229 ls::FileManager::OpenFile]: Trying to open file for read 'D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/PPSAO.bshd' while it doesn't exist!
+[24-07-2017 21:02:39:830][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\FileReader.cpp 72 ls::FileReader::Load]: Failed to open file 'D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/PPSAO.bshd'!
+[24-07-2017 21:02:39:830][D:\Develop\Dev\LSProjects\Framework\Code\RenderFramework\RendererCommands.cpp 1487 rf::DataLoaderAddShaderCommand::Init]: Couldn't load Shader: "D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/PPSAO.bshd"
+[24-07-2017 21:02:39:830][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourceManager.cpp 1640 ls::ResourceManager::InstantiateShader]: Instantiate shader with name "D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/PPSAO.bshd" has failed
+[24-07-2017 21:02:39:831][D:\Develop\Dev\LSProjects\Framework\Code\RenderFramework\StageGroup.cpp 26 rf::StageGroup::AddAppStage]: AppStage failed to load!
+[24-07-2017 21:02:39:922][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\FileManager.cpp 229 ls::FileManager::OpenFile]: Trying to open file for read 'D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/CascadedPCSS.bshd' while it doesn't exist!
+[24-07-2017 21:02:39:923][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\FileReader.cpp 72 ls::FileReader::Load]: Failed to open file 'D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/CascadedPCSS.bshd'!
+[24-07-2017 21:02:39:923][D:\Develop\Dev\LSProjects\Framework\Code\RenderFramework\RendererCommands.cpp 1487 rf::DataLoaderAddShaderCommand::Init]: Couldn't load Shader: "D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/CascadedPCSS.bshd"
+[24-07-2017 21:02:39:923][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourceManager.cpp 1640 ls::ResourceManager::InstantiateShader]: Instantiate shader with name "D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/CascadedPCSS.bshd" has failed
+[24-07-2017 21:02:39:923][D:\Develop\Dev\LSProjects\Framework\Code\RenderFramework\StageGroup.cpp 26 rf::StageGroup::AddAppStage]: AppStage failed to load!
+[24-07-2017 21:02:40:058][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\FileManager.cpp 229 ls::FileManager::OpenFile]: Trying to open file for read 'D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/DeferredSky_FadeBlack.bshd' while it doesn't exist!
+[24-07-2017 21:02:40:059][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\FileReader.cpp 72 ls::FileReader::Load]: Failed to open file 'D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/DeferredSky_FadeBlack.bshd'!
+[24-07-2017 21:02:40:059][D:\Develop\Dev\LSProjects\Framework\Code\RenderFramework\RendererCommands.cpp 1487 rf::DataLoaderAddShaderCommand::Init]: Couldn't load Shader: "D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/DeferredSky_FadeBlack.bshd"
+[24-07-2017 21:02:40:060][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourceManager.cpp 1640 ls::ResourceManager::InstantiateShader]: Instantiate shader with name "D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/DeferredSky_FadeBlack.bshd" has failed
+[24-07-2017 21:02:40:060][D:\Develop\Dev\LSProjects\Framework\Code\RenderFramework\StageGroup.cpp 26 rf::StageGroup::AddAppStage]: AppStage failed to load!
+[24-07-2017 21:02:40:223][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: Action2 in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:224][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: Action3 in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:224][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: LinkDevice in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:225][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: WidgetSliderDecrease in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:225][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: WidgetSliderIncrease in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:227][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: Action2 in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:227][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: Action3 in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:228][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: LinkDevice in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:228][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: WidgetSliderDecrease in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:228][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: WidgetSliderIncrease in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:230][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: Action2 in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:230][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: Action3 in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:231][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: LinkDevice in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:231][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: WidgetSliderDecrease in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:232][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: WidgetSliderIncrease in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:233][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: Action2 in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:234][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: Action3 in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:234][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: LinkDevice in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:234][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: WidgetSliderDecrease in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:235][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: WidgetSliderIncrease in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig_controller.json
+[24-07-2017 21:02:40:251][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: ContextMenu in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig.json
+[24-07-2017 21:02:40:252][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\InputScheme.cpp 484 ls::InputScheme::Load]: Unused keyevent found in binding file: TogglePause in D:/Develop/Dev/LSProjects/Apps/TestApps/Data/PlayerProfiles/Default/inputconfig.json
+[24-07-2017 21:02:40:260][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\FileManager.cpp 229 ls::FileManager::OpenFile]: Trying to open file for read 'D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/LinearizeDepth.bshd' while it doesn't exist!
+[24-07-2017 21:02:40:261][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\FileReader.cpp 72 ls::FileReader::Load]: Failed to open file 'D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/LinearizeDepth.bshd'!
+[24-07-2017 21:02:40:261][D:\Develop\Dev\LSProjects\Framework\Code\RenderFramework\RendererCommands.cpp 1487 rf::DataLoaderAddShaderCommand::Init]: Couldn't load Shader: "D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/LinearizeDepth.bshd"
+[24-07-2017 21:02:40:261][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourceManager.cpp 1640 ls::ResourceManager::InstantiateShader]: Instantiate shader with name "D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/LinearizeDepth.bshd" has failed
+[24-07-2017 21:02:40:262][D:\Develop\Dev\LSProjects\Framework\Code\RenderFramework\StageGroup.cpp 26 rf::StageGroup::AddAppStage]: AppStage failed to load!
+[24-07-2017 21:02:40:263][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\FileManager.cpp 229 ls::FileManager::OpenFile]: Trying to open file for read 'D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/PPSAO.bshd' while it doesn't exist!
+[24-07-2017 21:02:40:263][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\FileReader.cpp 72 ls::FileReader::Load]: Failed to open file 'D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/PPSAO.bshd'!
+[24-07-2017 21:02:40:264][D:\Develop\Dev\LSProjects\Framework\Code\RenderFramework\RendererCommands.cpp 1487 rf::DataLoaderAddShaderCommand::Init]: Couldn't load Shader: "D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/PPSAO.bshd"
+[24-07-2017 21:02:40:264][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourceManager.cpp 1640 ls::ResourceManager::InstantiateShader]: Instantiate shader with name "D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/PPSAO.bshd" has failed
+[24-07-2017 21:02:40:264][D:\Develop\Dev\LSProjects\Framework\Code\RenderFramework\StageGroup.cpp 26 rf::StageGroup::AddAppStage]: AppStage failed to load!
+[24-07-2017 21:02:40:265][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\FileManager.cpp 229 ls::FileManager::OpenFile]: Trying to open file for read 'D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/CascadedPCSS.bshd' while it doesn't exist!
+[24-07-2017 21:02:40:265][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\FileReader.cpp 72 ls::FileReader::Load]: Failed to open file 'D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/CascadedPCSS.bshd'!
+[24-07-2017 21:02:40:266][D:\Develop\Dev\LSProjects\Framework\Code\RenderFramework\RendererCommands.cpp 1487 rf::DataLoaderAddShaderCommand::Init]: Couldn't load Shader: "D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/CascadedPCSS.bshd"
+[24-07-2017 21:02:40:266][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourceManager.cpp 1640 ls::ResourceManager::InstantiateShader]: Instantiate shader with name "D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/Orthographic/CascadedPCSS.bshd" has failed
+[24-07-2017 21:02:40:266][D:\Develop\Dev\LSProjects\Framework\Code\RenderFramework\StageGroup.cpp 26 rf::StageGroup::AddAppStage]: AppStage failed to load!
+[24-07-2017 21:02:40:268][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\FileManager.cpp 229 ls::FileManager::OpenFile]: Trying to open file for read 'D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/DeferredSky_FadeBlack.bshd' while it doesn't exist!
+[24-07-2017 21:02:40:268][D:\Develop\Dev\LSProjects\Framework\Code\CoreLib\FileReader.cpp 72 ls::FileReader::Load]: Failed to open file 'D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/DeferredSky_FadeBlack.bshd'!
+[24-07-2017 21:02:40:269][D:\Develop\Dev\LSProjects\Framework\Code\RenderFramework\RendererCommands.cpp 1487 rf::DataLoaderAddShaderCommand::Init]: Couldn't load Shader: "D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/DeferredSky_FadeBlack.bshd"
+[24-07-2017 21:02:40:269][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourceManager.cpp 1640 ls::ResourceManager::InstantiateShader]: Instantiate shader with name "D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Shaders/DX11/DeferredSky_FadeBlack.bshd" has failed
+[24-07-2017 21:02:40:269][D:\Develop\Dev\LSProjects\Framework\Code\RenderFramework\StageGroup.cpp 26 rf::StageGroup::AddAppStage]: AppStage failed to load!
+[24-07-2017 21:02:41:985][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Creatures_Molespitter_Animation_Blueprint_State (545785c1-bb35-43e0-bb9e-41689d455a7b)
+
+Version:
+2.0.4.0
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Characters/Creatures/[PAK]_Creatures_Molespitter/545785c1-bb35-43e0-bb9e-41689d455a7b.lsf
+[24-07-2017 21:02:44:282][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Strokes_White_B_CM (0b906846-447e-427a-a6cb-b7896580b745)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_CubeMaps/0b906846-447e-427a-a6cb-b7896580b745.lsf
+[24-07-2017 21:02:44:284][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Cave_A_CM (164e99c1-95c4-436c-9a89-04ada539161a)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_CubeMaps/164e99c1-95c4-436c-9a89-04ada539161a.lsf
+[24-07-2017 21:02:44:285][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+ArmorReflection_CM (363f2467-d916-42e5-82cf-23a7e6d81bef)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_CubeMaps/363f2467-d916-42e5-82cf-23a7e6d81bef.lsf
+[24-07-2017 21:02:44:287][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Cave_B_CM (48a8b733-db60-4138-991c-7998036a0e74)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_CubeMaps/48a8b733-db60-4138-991c-7998036a0e74.lsf
+[24-07-2017 21:02:44:289][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Strokes_White_A_CM (49459924-d724-4df9-976f-53b1c1152565)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_CubeMaps/49459924-d724-4df9-976f-53b1c1152565.lsf
+[24-07-2017 21:02:44:290][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Indoor_A_CM (4bc7018b-d841-484c-b2c2-676e04edff99)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_CubeMaps/4bc7018b-d841-484c-b2c2-676e04edff99.lsf
+[24-07-2017 21:02:44:292][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Cave_C_CM (896661d3-98d4-4eef-b0cc-4a99efdcfba2)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_CubeMaps/896661d3-98d4-4eef-b0cc-4a99efdcfba2.lsf
+[24-07-2017 21:02:44:294][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+MirrorReflectionOffset_CM (9591c8bf-849c-40ad-95ea-a35af8a66f57)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_CubeMaps/9591c8bf-849c-40ad-95ea-a35af8a66f57.lsf
+[24-07-2017 21:02:44:295][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Sky03_CM (d65a15c3-8eee-4e78-82f5-41f9d36149b6)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_CubeMaps/d65a15c3-8eee-4e78-82f5-41f9d36149b6.lsf
+[24-07-2017 21:02:44:301][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Base_DM_SM_NM (099e2947-9327-4039-b808-05735f41678b)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/099e2947-9327-4039-b808-05735f41678b.lsf
+[24-07-2017 21:02:44:302][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Layout_Sunholmes_A_DM (1bae6056-0a39-4d81-a99d-5ea696bc4bcc)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/1bae6056-0a39-4d81-a99d-5ea696bc4bcc.lsf
+[24-07-2017 21:02:44:304][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Grey_Tiles_A_SM (316d6bde-7cbb-4142-b9fb-17ef91aca8c8)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/316d6bde-7cbb-4142-b9fb-17ef91aca8c8.lsf
+[24-07-2017 21:02:44:305][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Default_Blue_DM (37639d7e-7c65-41d2-89ad-d05050639be0)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/37639d7e-7c65-41d2-89ad-d05050639be0.lsf
+[24-07-2017 21:02:44:314][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Helper_Red_A (37bd1a33-0d44-4ae5-afa9-d16bb496fc5f)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/37bd1a33-0d44-4ae5-afa9-d16bb496fc5f.lsf
+[24-07-2017 21:02:44:315][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+FxStudioBackDrop (3c589a77-e597-45fb-a878-a868cc222fab)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/3c589a77-e597-45fb-a878-a868cc222fab.lsf
+[24-07-2017 21:02:44:318][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Helper_TexelDensity (3d67208a-b2b6-4a9a-b915-13a8aa061a35)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/3d67208a-b2b6-4a9a-b915-13a8aa061a35.lsf
+[24-07-2017 21:02:44:320][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Base_DM (4d2713a5-877e-4142-8385-41ed75a39df1)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/4d2713a5-877e-4142-8385-41ed75a39df1.lsf
+[24-07-2017 21:02:44:322][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+DebugGrid (4f3e2d65-4752-4e29-a5f6-a520867a5554)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/4f3e2d65-4752-4e29-a5f6-a520867a5554.lsf
+[24-07-2017 21:02:44:323][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Default_DM (50179e15-4bfb-4304-87a9-fd685ac9e853)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/50179e15-4bfb-4304-87a9-fd685ac9e853.lsf
+[24-07-2017 21:02:44:325][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Black (56df0907-93e9-45fd-8e5f-9e480a79308a)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/56df0907-93e9-45fd-8e5f-9e480a79308a.lsf
+[24-07-2017 21:02:44:326][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+UVTest_NM (58e47a87-4f8e-4471-8ee5-2166c103e174)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/58e47a87-4f8e-4471-8ee5-2166c103e174.lsf
+[24-07-2017 21:02:44:328][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Helper_Blue_A (59597c82-08fa-4e00-b6ba-6534fb0fc84f)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/59597c82-08fa-4e00-b6ba-6534fb0fc84f.lsf
+[24-07-2017 21:02:44:329][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Default_NM (5ea1563f-d6ed-474c-a5aa-0f2b39276bde)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/5ea1563f-d6ed-474c-a5aa-0f2b39276bde.lsf
+[24-07-2017 21:02:44:339][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Helper_Invisible (6148f9f3-a2d8-4aa9-add3-368c411b1080)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/6148f9f3-a2d8-4aa9-add3-368c411b1080.lsf
+[24-07-2017 21:02:44:342][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Base_DM (6456d48d-6ced-4933-aa69-460e24e2797a)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/6456d48d-6ced-4933-aa69-460e24e2797a.lsf
+[24-07-2017 21:02:44:343][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+UVTest_DM (66f34b62-5269-42d7-a2c3-d63df94854ca)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/66f34b62-5269-42d7-a2c3-d63df94854ca.lsf
+[24-07-2017 21:02:44:345][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Base_DM (67226d1b-27c9-4002-8ecf-30f7344e9b95)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/67226d1b-27c9-4002-8ecf-30f7344e9b95.lsf
+[24-07-2017 21:02:44:346][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Helper_Invisible_A (6c80cab7-3710-4dad-9eba-eb684062028e)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/6c80cab7-3710-4dad-9eba-eb684062028e.lsf
+[24-07-2017 21:02:44:348][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Default_Orange_DM (6da761c2-608c-44c9-b7b8-990922e54176)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/6da761c2-608c-44c9-b7b8-990922e54176.lsf
+[24-07-2017 21:02:44:349][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Helper_Stub_Box_A (75d67333-32ac-4605-ab37-b4982c06021c)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/75d67333-32ac-4605-ab37-b4982c06021c.lsf
+[24-07-2017 21:02:44:355][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Helper_Default_DM (7f1081bf-3ac8-4f71-baa5-aab8cfbb787e)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/7f1081bf-3ac8-4f71-baa5-aab8cfbb787e.lsf
+[24-07-2017 21:02:44:357][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Helper_QuestionMark_A (87fe5ecc-0044-4a4f-98da-4a6c8d69eb81)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/87fe5ecc-0044-4a4f-98da-4a6c8d69eb81.lsf
+[24-07-2017 21:02:44:358][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Helper_Stub_Box_A (9197028b-1a34-426c-b28f-28ac46b0b3a9)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/9197028b-1a34-426c-b28f-28ac46b0b3a9.lsf
+[24-07-2017 21:02:44:361][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Helper_Stub_Box_B (936cf40c-1c96-4d1b-ac37-7a443a9c371f)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/936cf40c-1c96-4d1b-ac37-7a443a9c371f.lsf
+[24-07-2017 21:02:44:363][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Base_DM (94f62d1b-4e14-4350-b481-8d5bfac3be35)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/94f62d1b-4e14-4350-b481-8d5bfac3be35.lsf
+[24-07-2017 21:02:44:367][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Helper_QuestionMark_A (9a4fd49b-4d00-4d78-a2fd-56f31322914f)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/9a4fd49b-4d00-4d78-a2fd-56f31322914f.lsf
+[24-07-2017 21:02:44:368][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Smile (9acd020a-edeb-4c9e-9a8c-589636e1c316)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/9acd020a-edeb-4c9e-9a8c-589636e1c316.lsf
+[24-07-2017 21:02:44:373][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Helper_ExclamationMark_A (ab0eeeb2-dac6-47fc-8055-b513e676866a)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/ab0eeeb2-dac6-47fc-8055-b513e676866a.lsf
+[24-07-2017 21:02:44:374][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Helpers_Donotuse_A_DM (ab37a455-b0b2-43ca-8a40-4a493275a76c)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/ab37a455-b0b2-43ca-8a40-4a493275a76c.lsf
+[24-07-2017 21:02:44:376][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Default_Flat_NM (ad3f8f8e-8169-4324-9463-85512b2f62c5)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/ad3f8f8e-8169-4324-9463-85512b2f62c5.lsf
+[24-07-2017 21:02:44:385][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Helper_ShaderComplexity (b95f5223-df21-4e0a-b9f4-52baf100d225)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/b95f5223-df21-4e0a-b9f4-52baf100d225.lsf
+[24-07-2017 21:02:44:386][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Dummy (bb430a83-9d8c-4ead-9a77-a69edf5b69c2)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/bb430a83-9d8c-4ead-9a77-a69edf5b69c2.lsf
+[24-07-2017 21:02:44:386][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Grey_Tiles_A_DM (be512f6a-84c5-4ef4-b276-4112254cc180)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/be512f6a-84c5-4ef4-b276-4112254cc180.lsf
+[24-07-2017 21:02:44:388][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Default_CM (c48de302-b149-43fa-a58e-ffb6f3c4380b)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/c48de302-b149-43fa-a58e-ffb6f3c4380b.lsf
+[24-07-2017 21:02:44:398][D:\Develop\Dev\LSProjects\Framework\Code\GameEngine\ResourcePackage.cpp 246 ls::ResourcePackage::CheckVersion]: Warning: resource version too old, please resave with latest editor version!
+
+Name:
+Helper_Outline (c501ead4-7412-4f32-97b7-77e706705642)
+
+Version:
+2.0.3.5
+
+File:
+D:/Develop/Dev/LSProjects/Apps/TestApps/Data/Public/Shared/Content/Assets/Textures/[PAK]_Helpers/c501ead4-7412-4f32-97b7-77e706705642.lsf
+[24-07-2017 
