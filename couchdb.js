@@ -23,10 +23,10 @@
  * See README.md for more details and licensing.
  * Licensed under MIT, Copyright (c) 2010 Rasmus Andersson <http://hunch.se/>.
  */
-var sys = require("sys"),
-  http = require("http"),
-  sys = require("sys"),
-  querystring = require("querystring");
+const sys = require("sys");
+const http = require("http");
+const querystring = require("querystring");
+const EventEmitter = require("node:events");
 
 // ----------------------------------------------------------------------------
 // Convenience default server instance (localhost:5984, lazy)
@@ -410,7 +410,7 @@ mixin(exports.Db.prototype, {
 // Simple instance pool (aka free list)
 
 function Pool(keep, limit) {
-  process.EventEmitter.call(this);
+  EventEmitter.call(this);
   this.keep = keep || 0;
   this.limit = limit || 128;
   this.free = []; // push used to end/right, shift new from front/left
@@ -418,7 +418,6 @@ function Pool(keep, limit) {
   this.getQueue = [];
 }
 
-const EventEmitter = require("node:events");
 sys.inherits(Pool, EventEmitter);
 
 Pool.prototype.create = function () {
