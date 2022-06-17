@@ -1,5 +1,3 @@
-import { _t } from "../imports.jsx";
-
 export const initialState = {
   //   signInForm: {},
   //   signUpForm: {},
@@ -17,12 +15,12 @@ export const commonReducers = {
     shownMenu: payload,
   }),
 
-  // // store a general error message in state, to activate snackbar notifications
-  // ERROR: (state, payload) => ({
-  //     ...state,
-  //     errMsg: payload,
-  //     inProgress: ""
-  // }),
+  // store a general error message in state, to activate snackbar notifications
+  ERROR: (state, payload) => ({
+    ...state,
+    errMsg: payload,
+    inProgress: "",
+  }),
 
   // store which progress bar is acive
   IN_PROGRESS: (state, payload) => ({
@@ -40,12 +38,5 @@ export const commonReducers = {
   CLEAR_INFO_MESSAGE: (state) => ({
     ...state,
     infoMsg: "",
-  }),
-
-  // update language in state after a successfful language change
-  LANGUAGE_CHANGED: (state, payload) => ({
-    ...state,
-    language: payload.value,
-    infoMsg: `${_t("Language changed to")} ${payload.label}!`,
   }),
 };

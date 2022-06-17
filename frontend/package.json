@@ -7,8 +7,7 @@
     "start": "webpack-dev-server --env dev --open",
     "build": "webpack",
     "test": "jest",
-    "test:watch": "jest --watch",
-    "i18n": "grunt i18next"
+    "test:watch": "jest --watch"
   },
   "author": "Goce Dokoski",
   "license": "ISC",
@@ -18,9 +17,9 @@
     ],
     "collectCoverage": true,
     "globals": {
-      "WP_CONF_BASE_URL": "http://localhost:5984",
+      "WP_CONF_BASE_URL": "http://admin:admin@localhost:5984",
       "WP_CONF_REMOTE_DB_URL": "/",
-      "WP_CONF_REMOTE_DB_NAME": "test"
+      "WP_CONF_REMOTE_DB_NAME": "logs"
     }
   },
   "dependencies": {
@@ -42,10 +41,6 @@
     "grunt-cli": "^1.4.3",
     "html-webpack-plugin": "^5.5.0",
     "htmlparser2": "^8.0.1",
-    "i18next": "^21.8.10",
-    "i18next-browser-languagedetector": "^6.1.4",
-    "i18next-parser": "^6.5.0",
-    "i18next-scanner": "^3.3.0",
     "jest": "^28.1.1",
     "json-loader": "^0.5.7",
     "pouchdb": "^7.3.0",

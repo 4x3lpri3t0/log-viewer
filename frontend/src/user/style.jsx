@@ -11,17 +11,6 @@ export default (theme) => ({
       marginRight: "auto",
     },
   },
-  // paper: {
-  //   marginTop: theme.spacing.unit * 3,
-  //   display: 'flex',
-  //   flexDirection: 'column',
-  //   alignItems: 'center',
-  //   padding: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 3}px ${theme.spacing.unit * 3}px`,
-  // },
-  // avatar: {
-  //   margin: 10,
-  //   cursor: 'pointer'
-  // },
   link: {
     textDecoration: "none",
     color: "inherit",

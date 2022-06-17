@@ -1,5 +1,4 @@
 import { React, connect, _t } from "../../imports.jsx";
-import styles from "../style.jsx";
 
 export const _Home = (props) => (
   <main className={props.classes.main}>
