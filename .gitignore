@@ -5,3 +5,6 @@ tmp
 .*.swo
 *.pid
 config.js
+
+# Dependency directories
+node_modules/
