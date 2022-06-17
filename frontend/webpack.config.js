@@ -3,7 +3,7 @@ const config = require("./config.json");
 
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
+// const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = (env) => {
   const base_url = "/";
@@ -14,12 +14,6 @@ module.exports = (env) => {
     mode: "development",
     module: {
       rules: [
-        {
-          enforce: "pre",
-          test: [/\.js$/, /\.jsx$/],
-          exclude: /node_modules/,
-          loader: "eslint-loader",
-        },
         {
           test: [/\.js$/, /\.jsx$/],
           exclude: /node_modules/,
@@ -46,7 +40,7 @@ module.exports = (env) => {
         template: "./src/index.html",
         base: base_url,
       }),
-      new CopyPlugin([{ from: "assets/", to: "assets/" }]),
+      // new CopyPlugin([{ from: "assets/", to: "assets/" }]),
       new webpack.DefinePlugin({
         WP_CONF_BASE_URL: JSON.stringify(base_url),
         WP_CONF_REMOTE_DB_URL: JSON.stringify(config.remote_db_url_dev),

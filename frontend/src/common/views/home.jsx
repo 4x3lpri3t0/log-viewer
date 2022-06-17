@@ -1,9 +1,9 @@
-import { React, withStyles, connect, _t, Paper, Typography } from "../../imports.jsx"
-import styles from "../style.jsx"
+import { React, connect, _t } from "../../imports.jsx";
+import styles from "../style.jsx";
 
-export const _Home = props =>
-	<main className={props.classes.main}>
-		<Paper 
+export const _Home = (props) => (
+  <main className={props.classes.main}>
+    {/* <Paper 
 			className={props.classes.paper}>
 				<Typography 
 					component="h1" 
@@ -17,12 +17,10 @@ export const _Home = props =>
 					variant="body2"> 
 						{_t('This is the home page of the couchdb-react boilerplate preview')}.
 				</Typography>
-		</Paper>
-	</main>
+		</Paper> */}
+  </main>
+);
 
-
-export const Home = connect(
-	state => ({
-		signedInUserData: state.signedInUserData,
-	})
-)(withStyles(styles)(_Home))
+export const Home = connect((state) => ({
+  signedInUserData: state.signedInUserData,
+}))(_Home);

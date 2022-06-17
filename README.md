@@ -2,7 +2,7 @@
 
 ## A single-page react app using a couchdb backend
 
-This project can serve as a starting point for any kind of full-stack application. It uses the React.js framework, the Material-ui library, i18next for internationalization and has a fully functional user management using the CouchDB API.
+This project can serve as a starting point for any kind of full-stack application. It uses the React.js framework, i18next for internationalization and has a fully functional user management using the CouchDB API.
 
 Currently that's all there is to it. Feel free to check out the [demo page](https://gocedoko.github.io/couchdb-react-boilerplate/), create a user, edit your profile and upload a photo. 
 

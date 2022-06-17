@@ -38,6 +38,16 @@ Log breakdown:
 - Session date (end?)
 - Session duration
 
+# Local Frontend
+
+```sh
+$ nvm use 17.0.0 # Or install node version 17.0.0 manually
+$ cd frontend
+$ yarn install
+$ yarn run build
+$ npm start
+```
+
 # CouchDB locally
 
 Requirements:
