@@ -34,5 +34,20 @@ Log breakdown:
 - Session date (end?)
 - Session duration
 
-docker run -e COUCHDB_USER=admin -e COUCHDB_PASSWORD=password -d couchdb
-(src: https://hub.docker.com/_/couchdb)
+# CouchDB
+
+```sh
+helm repo add couchdb https://apache.github.io/couchdb-helm
+
+helm install couchdb couchdb/couchdb \
+  --set couchdbConfig.couchdb.uuid=$(curl https://www.uuidgenerator.net/api/version4 2>/dev/null | tr -d -)
+
+kubectl get pods --namespace default -l "app=couchdb,release=couchdb"
+
+kubectl exec --namespace default couchdb-couchdb-0 -c couchdb -- \
+    curl -s \
+    http://127.0.0.1:5984/_cluster_setup \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -d '{"action": "finish_cluster"}'
+```
