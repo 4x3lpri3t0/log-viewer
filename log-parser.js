@@ -23,7 +23,6 @@ exports.logParser = function (msg, index) {
     // - Function
     // - Text blob
     // TODO: See TODO.md
-    // if ((tmp = line.match(/(\d{2}-\d{2}-\d{4} \d{2}:\d{2}:\d{2}:\d{3})/))) {
     if (
       line.match(
         /((?<=\[)(\d{2}-\d{2}-\d{4} \d{2}:\d{2}:\d{2}:\d{3}).+?(?=\]))/g
@@ -169,12 +168,14 @@ exports.logParser = function (msg, index) {
     // }
   }
 
-  if (request.processing) {
+  if (request) {
     if (exports.isDebug()) {
       sys.puts(sys.inspect(request));
       sys.puts("\n");
     }
+
     return request;
+    // return false;
   } else {
     if (exports.isDebug()) {
       sys.puts("\nERROR:: Could not process log message:\n\n");
@@ -192,7 +193,9 @@ exports.logParser = function (msg, index) {
 exports.process_logs = function (file, process_func, save_func) {
   fs.readFile(file, "utf8", function (read_error, content) {
     var logs = [];
-    if (read_error) return sys.error(read_error);
+    if (read_error) {
+      return sys.error(read_error);
+    }
 
     // TODO:: Remove these hardcode rails filters
     // switch filters and split functions to a nested helper in process func

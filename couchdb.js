@@ -23,6 +23,7 @@
  * See README.md for more details and licensing.
  * Licensed under MIT, Copyright (c) 2010 Rasmus Andersson <http://hunch.se/>.
  */
+const nano = require("nano")("http://localhost:5984");
 const sys = require("sys");
 const http = require("http");
 const querystring = require("querystring");
@@ -129,6 +130,7 @@ exports.Db = function Db(options) {
     this.secure
   );
 };
+
 mixin(exports.Db.prototype, {
   // GET something
   // post( [String path|Object options] [, callback(Error, Object, Response)] )
@@ -256,7 +258,33 @@ mixin(exports.Db.prototype, {
         conn.removeListener("close", onConnClose);
       };
       conn.addListener("close", onConnClose);
-      req = conn.request(opt.method, opt.path, opt.headers);
+
+      const logsTable = nano.db.use("logs"); // TODO: This shouldn't be specified here.
+      const response = await logsTable.insert({ happy: true }, 'rabbit');
+      console.log(response);
+      couch
+        .insert("logs", {
+          // TODO:
+          _id: "document_id",
+          field: ["sample", "data", true],
+        })
+        .then(
+          ({ data, headers, status }) => {
+            console.log(data);
+
+            // data is json response
+            // headers is an object with all response headers
+            // status is statusCode number
+          },
+          (err) => {
+            console.log(err);
+
+            // either request error occured
+            // ...or err.code=EDOCCONFLICT if document with the same id already exists
+          }
+        );
+
+      //   req = conn.request(opt.method, opt.path, opt.headers);
       if (self.debug) {
         sys.log(
           "[" +
@@ -487,8 +515,15 @@ function HTTPConnectionPool(keep, limit, port, host, secure) {
 }
 sys.inherits(HTTPConnectionPool, Pool);
 HTTPConnectionPool.prototype.create = function () {
-  var self = this,
-    conn = http.createClient(this.port, this.host);
+  var self = this;
+  //   var conn = http.createClient(this.port, this.host);
+  var conn = http.request({
+    port: this.port,
+    host: this.host,
+    method: "PUT",
+    path: "/",
+  });
+
   if (this.secure) {
     if (typeof this.secure !== "object") this.secure = {};
     conn.setSecure(
