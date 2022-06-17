@@ -1,0 +1,79 @@
+{
+  "name": "couchdb-react-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate for a React-based single-page app and a Couchdb backend",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --env.dev --open",
+    "build": "webpack --env.prod",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "i18n": "grunt i18next"
+  },
+  "author": "Goce Dokoski",
+  "license": "ISC",
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>__tests__/setup/setupEnzyme.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/__tests__/setup/"
+    ],
+    "collectCoverage": true,
+    "globals": {
+      "WP_CONF_BASE_URL": "http://localhost:5984",
+      "WP_CONF_REMOTE_DB_URL": "/",
+      "WP_CONF_REMOTE_DB_NAME": "test"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
+    "babel-loader": "^8.0.5",
+    "copy-webpack-plugin": "^5.0.0",
+    "cryptiles": "^4.1.3",
+    "css-loader": "^0.28.11",
+    "docuri": "^4.2.2",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
+    "enzyme-to-json": "^3.3.5",
+    "eslint": "^5.15.1",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-redux": "^3.0.1",
+    "grunt": "^1.0.3",
+    "grunt-cli": "^1.3.2",
+    "html-webpack-plugin": "^3.2.0",
+    "i18next": "^11.10.2",
+    "i18next-browser-languagedetector": "^2.2.4",
+    "i18next-parser": "^1.0.0-beta9",
+    "i18next-scanner": "^2.9.1",
+    "jest": "^24.1.0",
+    "json-loader": "^0.5.7",
+    "notistack": "^0.4.2",
+    "pouchdb": "^7.0.0",
+    "pouchdb-authentication": "^1.1.3",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-mock-store": "^1.5.3",
+    "redux-thunk": "^2.3.0",
+    "terser-webpack-plugin": "^1.2.3",
+    "utf8": "^3.0.0",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "codecov": "^3.2.0"
+  }
+}

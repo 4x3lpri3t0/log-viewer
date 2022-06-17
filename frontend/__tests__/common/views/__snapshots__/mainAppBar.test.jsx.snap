@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<_MainAppBar /> render() component is rendered exactly like the last time 1`] = `
+<header
+  class="MuiPaper-root-27 MuiPaper-elevation4-33 MuiAppBar-root-18 MuiAppBar-positionAbsolute-20 MuiAppBar-colorPrimary-25 Component-appBar-4"
+>
+  <div
+    class="MuiToolbar-root-54 MuiToolbar-regular-56 MuiToolbar-gutters-55 Component-toolbar-2"
+  >
+    <h1
+      class="MuiTypography-root-58 MuiTypography-h6-75 MuiTypography-colorInherit-87 Component-title-8"
+    >
+      <a
+        class="Component-link-13"
+        href="/"
+      >
+        Couchdb-React Boilerplate
+      </a>
+    </h1>
+    <button
+      aria-haspopup="true"
+      class="MuiButtonBase-root-104 MuiIconButton-root-98 MuiIconButton-colorInherit-99"
+      id="languageMenuButton"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiIconButton-label-103"
+      >
+        <span
+          class="MuiBadge-root-107"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root-114"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"
+            />
+          </svg>
+          <span
+            class="MuiBadge-badge-108 MuiBadge-colorPrimary-109"
+          />
+        </span>
+      </span>
+    </button>
+    <a
+      class="_UserBarMenu-link-126"
+      href="/signin"
+    >
+      <button
+        class="MuiButtonBase-root-104 MuiButton-root-131 MuiButton-text-133 MuiButton-flat-136 MuiButton-colorInherit-152"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label-132"
+        >
+          Sign in
+        </span>
+      </button>
+    </a>
+  </div>
+</header>
+`;
+
+exports[`<_MainAppBar /> render() component is rendered with language='en' exactly like the last time 1`] = `
+<header
+  class="MuiPaper-root-27 MuiPaper-elevation4-33 MuiAppBar-root-18 MuiAppBar-positionAbsolute-20 MuiAppBar-colorPrimary-25 Component-appBar-4"
+>
+  <div
+    class="MuiToolbar-root-54 MuiToolbar-regular-56 MuiToolbar-gutters-55 Component-toolbar-2"
+  >
+    <h1
+      class="MuiTypography-root-58 MuiTypography-h6-75 MuiTypography-colorInherit-87 Component-title-8"
+    >
+      <a
+        class="Component-link-13"
+        href="/"
+      >
+        Couchdb-React Boilerplate
+      </a>
+    </h1>
+    <button
+      aria-haspopup="true"
+      class="MuiButtonBase-root-104 MuiIconButton-root-98 MuiIconButton-colorInherit-99"
+      id="languageMenuButton"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiIconButton-label-103"
+      >
+        <span
+          class="MuiBadge-root-107"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root-114"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M0 0h24v24H0z"
+              fill="none"
+            />
+            <path
+              d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2 0 .68.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2 0-.68.07-1.35.16-2h4.68c.09.65.16 1.32.16 2 0 .68-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2 0-.68-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"
+            />
+          </svg>
+          <span
+            class="MuiBadge-badge-108 MuiBadge-colorPrimary-109"
+          >
+            en
+          </span>
+        </span>
+      </span>
+    </button>
+    <a
+      class="_UserBarMenu-link-126"
+      href="/signin"
+    >
+      <button
+        class="MuiButtonBase-root-104 MuiButton-root-131 MuiButton-text-133 MuiButton-flat-136 MuiButton-colorInherit-152"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label-132"
+        >
+          Sign in
+        </span>
+      </button>
+    </a>
+  </div>
+</header>
+`;

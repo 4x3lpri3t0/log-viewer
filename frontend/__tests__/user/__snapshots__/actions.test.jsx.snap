@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`user actions getSession dispatches correct action and payload 1`] = `Array []`;
+
+exports[`user actions initProfileForm dispatches correct action and payload 1`] = `
+Array [
+  Object {
+    "type": "INIT_PROFILE_FORM",
+  },
+]
+`;
+
+exports[`user actions signIn dispatches correct action and payload 1`] = `Array []`;
+
+exports[`user actions signOut dispatches correct action and payload 1`] = `Array []`;
+
+exports[`user actions signUp dispatches correct action and payload 1`] = `
+Array [
+  Object {
+    "payload": "IN_PROGRESS_SIGNIN",
+    "type": "IN_PROGRESS",
+  },
+]
+`;
+
+exports[`user actions updateFormField dispatches correct action and payload 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "form": "form",
+      "id": "id",
+      "value": "value",
+    },
+    "type": "UPDATE_FORM_FIELD",
+  },
+]
+`;
+
+exports[`user actions updateProfile dispatches correct action and payload 1`] = `
+Array [
+  Object {
+    "payload": "IN_PROGRESS_UPDATE_PROFILE",
+    "type": "IN_PROGRESS",
+  },
+]
+`;

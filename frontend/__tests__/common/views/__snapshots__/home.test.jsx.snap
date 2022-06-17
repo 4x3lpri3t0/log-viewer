@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> render() with empty state component is rendered exactly like the last time 1`] = `
+<main>
+  <div
+    class="MuiPaper-root-18 MuiPaper-elevation2-22 MuiPaper-rounded-19 Component-paper-17"
+  >
+    <h1
+      class="MuiTypography-root-45 MuiTypography-h5-61 MuiTypography-gutterBottom-72"
+    >
+      Welcome undefined undefined
+    </h1>
+    <p
+      class="MuiTypography-root-45 MuiTypography-body2-53"
+    >
+      This is the home page of the couchdb-react boilerplate preview.
+    </p>
+  </div>
+</main>
+`;
+
+exports[`<Home /> render() with user details component is rendered exactly like the last time 1`] = `
+<main>
+  <div
+    class="MuiPaper-root-18 MuiPaper-elevation2-22 MuiPaper-rounded-19 Component-paper-97"
+  >
+    <h1
+      class="MuiTypography-root-45 MuiTypography-h5-61 MuiTypography-gutterBottom-72"
+    >
+      Welcome Goce Dokoski
+    </h1>
+    <p
+      class="MuiTypography-root-45 MuiTypography-body2-53"
+    >
+      This is the home page of the couchdb-react boilerplate preview.
+    </p>
+  </div>
+</main>
+`;

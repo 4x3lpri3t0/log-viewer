@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`common actions changeLanguage dispatches correct action and payload 1`] = `
+Array [
+  Object {
+    "type": "SHOW_MENU",
+  },
+  Object {
+    "payload": Object {
+      "label": "English",
+      "value": "en",
+    },
+    "type": "LANGUAGE_CHANGED",
+  },
+]
+`;
+
+exports[`common actions clearErrorMessage dispatches correct action and payload 1`] = `
+Array [
+  Object {
+    "type": "CLEAR_ERROR_MESSAGE",
+  },
+]
+`;
+
+exports[`common actions clearInfoMessage dispatches correct action and payload 1`] = `
+Array [
+  Object {
+    "type": "CLEAR_INFO_MESSAGE",
+  },
+]
+`;
+
+exports[`common actions showMenu dispatches correct action and payload 1`] = `
+Array [
+  Object {
+    "payload": undefined,
+    "type": "SHOW_MENU",
+  },
+]
+`;
