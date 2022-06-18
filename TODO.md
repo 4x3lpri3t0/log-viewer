@@ -38,15 +38,28 @@ Log breakdown:
 - Session date (end?)
 - Session duration
 
+# Local Logs Processor
+
+```sh
+$ cd logs-processor
+$ node main
+```
+
+# Local Logs Reader
+
+```sh
+$ cd logs-reader
+$ node main
+```
+
 # Local Frontend
 
 ```sh
 $ nvm use 17.0.0 # Or install node version 17.0.0 manually
 $ cd frontend
 $ yarn # install dependencies
-$ add-cors-to-couchdb
 $ yarn run build
-$ npm start
+$ yarn start
 ```
 
 # CouchDB locally
@@ -59,12 +72,6 @@ Requirements:
 Check DB status after install:
 ```sh
 $ curl -X GET http://admin:admin@127.0.0.1:5984/_users
-```
-
-# NPM
-
-```sh
-$ npm ci
 ```
 
 # CouchDB on k8s

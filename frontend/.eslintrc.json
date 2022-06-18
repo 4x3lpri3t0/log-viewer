@@ -14,5 +14,9 @@
     "sourceType": "module"
   },
   "plugins": ["react", "@typescript-eslint"],
-  "rules": {}
+  "rules": {
+    "semi": 2,
+    "require-jsdoc": 0,
+    "indent": ["error", 2]
+  }
 }
