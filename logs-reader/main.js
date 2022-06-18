@@ -29,10 +29,10 @@ var config = require("./config").config;
 
 var init = async function () {
   await nano.db
-    .get(config.couch_db_name)
+    .get(config.couch_db_logs_name)
     .catch((err) => {
       if (err.error == "not_found") {
-        nano.db.create(config.couch_db_name);
+        nano.db.create(config.couch_db_logs_name);
       } else {
         console.log(err);
         console.log("Is CouchDB running locally?");
@@ -40,12 +40,12 @@ var init = async function () {
       }
     })
     .finally(() => {
-      console.log(config.couch_db_name + " database ready to be used.");
+      console.log(config.couch_db_logs_name + " database ready to be used.");
     });
 };
 
 var readFromDatabase = async function (callback) {
-  const logsDatabase = nano.db.use(config.couch_db_name);
+  const logsDatabase = nano.db.use(config.couch_db_logs_name);
   await logsDatabase
     .list(params)
     .then((response) => {

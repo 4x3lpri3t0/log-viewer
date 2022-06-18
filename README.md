@@ -1,4 +1,4 @@
-# Logs Processor (Parser + Saver) + Frontend (React) + CouchDB
+# Log Processor (Parser + Saver) + Frontend (React) + CouchDB
 
 Components:
 * logs-processor:
