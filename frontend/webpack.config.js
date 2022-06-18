@@ -2,13 +2,25 @@ const webpack = require("webpack");
 const config = require("./config.json");
 
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
-// const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = (env) => {
   const base_url = "/";
 
   return {
+    resolve: {
+      fallback: {
+        fs: false,
+        tls: false,
+        net: false,
+        path: false,
+        zlib: false,
+        http: false,
+        https: false,
+        stream: false,
+        crypto: false,
+      },
+    },
+
     entry: "./src/index.jsx",
     devServer: { historyApiFallback: true },
     mode: "development",

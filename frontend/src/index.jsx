@@ -10,6 +10,8 @@ import {
   createLogger,
 } from "./imports.jsx";
 
+import db from "./db.jsx";
+
 import { commonReducers, initialState } from "./common/reducers.jsx";
 import userReducers from "./user/reducers.jsx";
 
@@ -80,13 +82,53 @@ const reducerFunctions = {
 //   applyMiddleware(thunkMiddleware, createLogger())
 // );
 
+const getDocument = function () {
+  //   if (props.password !== props.repeatPassword)
+  //     return dispatch({ type: ERROR, payload: "Passwords do not match" });
+
+  //   dispatch({ type: IN_PROGRESS, payload: IN_PROGRESS_SIGNIN });
+
+  console.log("MMMHHH...");
+
+  db.initDb("logs");
+
+  db.getDocs("logs")
+    .then((response) => {
+      console.log("GOOD");
+      console.log(response);
+    })
+    .catch((err) => {
+      console.log("BAD");
+      console.log(err);
+      throw err;
+    });
+
+  //   db.getDoc("logs", "6b1de0ffe31b04474ec38a999e003b15")
+  //     .then((doc) => {
+  //       console.log("GOOD");
+  //       console.log(doc);
+  //     })
+  //     .catch((err) => {
+  //       console.log("BAD");
+  //       console.log(err);
+  //       throw err;
+  //     });
+
+  // .then(() => dispatch(signIn(props)))
+  // .catch((err) => dispatch(toAction(err)));
+};
+getDocument();
+
 // Render the main class into DOM
 
-ReactDOM.render(
-  //   <Provider store={store}>
-  //     <Router history={createBrowserHistory({ basename: WP_CONF_BASE_URL })}>
-  //       <StyledMain />
-  //     </Router>
-  //   </Provider>,
-  document.getElementById("index")
-);
+ReactDOM.render(<></>, document.getElementById("index"));
+
+// ReactDOM.render(
+//   //   <Provider store={store}>
+//   //     <Router history={createBrowserHistory({ basename: WP_CONF_BASE_URL })}>
+//   //       <StyledMain />
+//   //     </Router>
+//   //   </Provider>,
+
+// //   document.getElementById("index")
+// );

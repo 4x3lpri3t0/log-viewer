@@ -31,13 +31,13 @@ const couchdbErrMessages = {
 // shortcut function to generate corresponding error action
 const toAction = (err) => ({
   type: ERROR,
-  payload: couchdbErrMessages[err.name] || _t("Network error"),
+  payload: couchdbErrMessages[err.name] || "Network error",
 });
 
 // sign up the user to couchdb
 export const signUp = (props) => (dispatch) => {
   if (props.password !== props.repeatPassword)
-    return dispatch({ type: ERROR, payload: _t("Passwords do not match") });
+    return dispatch({ type: ERROR, payload: "Passwords do not match" });
 
   dispatch({ type: IN_PROGRESS, payload: IN_PROGRESS_SIGNIN });
 
@@ -145,7 +145,7 @@ export const updateProfile = (props) => (dispatch) => {
     if (props.password !== props.repeatPassword)
       return dispatch({
         type: ERROR,
-        payload: _t("Passwords do not match"),
+        payload: "Passwords do not match",
       });
     userData.password = props.password;
   }
@@ -170,7 +170,7 @@ export const updateProfile = (props) => (dispatch) => {
     .catch(() =>
       dispatch({
         type: ERROR,
-        payload: _t("Error while updating the user profile"),
+        payload: "Error while updating the user profile",
       })
     );
 };
@@ -232,7 +232,7 @@ export const signOut = (firstName, lastName) => (dispatch) => {
     .catch(() =>
       dispatch({
         type: ERROR,
-        payload: _t("Couldn't sign out"),
+        payload: "Couldn't sign out",
       })
     );
 };

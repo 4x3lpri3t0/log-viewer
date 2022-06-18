@@ -9,7 +9,8 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/main.js"
+      // "program": "${workspaceFolder}/logs-processor/main.js"
+      "program": "${workspaceFolder}/logs-reader/main.js"
     }
   ]
 }

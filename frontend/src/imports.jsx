@@ -27,7 +27,9 @@ export {
 
 // PouchDB connection
 
-import PouchDB from "pouchdb";
+import PouchDB from "pouchdb-core";
+// PouchDB.plugin(require("pouchdb-adapter-asyncstorage").default);
+
 import PouchDBAuth from "pouchdb-authentication";
 
 PouchDB.plugin(PouchDBAuth);

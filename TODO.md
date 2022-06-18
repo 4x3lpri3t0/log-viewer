@@ -43,7 +43,8 @@ Log breakdown:
 ```sh
 $ nvm use 17.0.0 # Or install node version 17.0.0 manually
 $ cd frontend
-$ yarn install
+$ yarn # install dependencies
+$ add-cors-to-couchdb
 $ yarn run build
 $ npm start
 ```
@@ -53,6 +54,7 @@ $ npm start
 Requirements:
 * CouchDB
   - Installation guide: https://docs.couchdb.org/en/3.2.0/install/index.html
+  - Enable CORS: http://localhost:5984/_utils/#_config/couchdb@localhost/cors
 
 Check DB status after install:
 ```sh
