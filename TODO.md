@@ -12,12 +12,14 @@ Using the logs -> complete the following:
 
 The entries in the log files should be able to be parsed with a line parser (it's not xml or json).
 
-A log entry contains a timestamp, file, line, function, and a blob of text (that can contain newlines) with the actual info in it.
+A log entry contains a timestamp, file, line, function, and a blob of text (that can contain newlines).
 
 # Additional requirements:
 
 - [ ] a log should be able to be linked to a session (id, date, duration)
-- [ ] for a certain amount of sessions (let's say the amount is dictated between 2 dates/times), we would like to see the top 10 most occurring log entries and the top 10 entries that occur most across all sessions
+- [ ] for a certain amount of sessions (let's say the amount is dictated between 2 dates/times), we would like to see:
+  - [ ] top 10 most occurring log entries
+  - [ ] the top 10 entries that occur most across all sessions
 - [ ] we would like to see entries that are new since a certain date/time, so the first occurrence of that log entry should be after that specific date/time. The error cannot have occurred before the given date/time
 
 # TODO
