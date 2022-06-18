@@ -1,73 +1,53 @@
 {
-  "name": "couchdb-react-boilerplate",
-  "version": "1.0.0",
-  "description": "A boilerplate for a React-based single-page app and a Couchdb backend",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "webpack-dev-server --env dev --open",
-    "build": "webpack",
-    "test": "jest",
-    "test:watch": "jest --watch"
-  },
-  "author": "Goce Dokoski",
-  "license": "ISC",
-  "jest": {
-    "testPathIgnorePatterns": [
-      "<rootDir>/__tests__/setup/"
-    ],
-    "collectCoverage": true,
-    "globals": {
-      "WP_CONF_BASE_URL": "http://admin:admin@127.0.0.1:5984",
-      "WP_CONF_REMOTE_DB_URL": "/",
-      "WP_CONF_REMOTE_DB_NAME": "logs"
-    }
-  },
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "@babel/core": "^7.18.5",
-    "@babel/polyfill": "^7.2.5",
-    "@babel/preset-env": "^7.18.2",
-    "@babel/preset-react": "^7.17.12",
-    "@emotion/react": "^11.9.3",
-    "assert": "^2.0.0",
-    "babel-jest": "^28.1.1",
-    "babel-loader": "^8.2.5",
-    "codecov": "^3.8.2",
-    "core-js": "2",
-    "cryptiles": "^4.1.3",
-    "css-loader": "^6.7.1",
-    "docuri": "^4.2.2",
-    "dom-utils": "^0.9.0",
-    "domutils": "^3.0.1",
-    "grunt": "^1.5.3",
-    "grunt-cli": "^1.4.3",
-    "html-webpack-plugin": "^5.5.0",
-    "htmlparser2": "^8.0.1",
-    "http": "^0.0.1-security",
-    "http-browserify": "^1.7.0",
-    "https-browserify": "^1.0.0",
-    "jest": "^28.1.1",
-    "json-loader": "^0.5.7",
-    "nano": "^10.0.0",
-    "pouchdb": "^7.3.0",
-    "pouchdb-adapter-asyncstorage": "^6.4.1",
-    "pouchdb-authentication": "^1.1.3",
-    "pouchdb-core": "^7.3.0",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
-    "react-native": "^0.68.2",
-    "react-redux": "^8.0.2",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "^5.0.1",
-    "redux": "^4.2.0",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.4.1",
-    "stream": "^0.0.2",
-    "terser-webpack-plugin": "^5.3.3",
-    "url": "^0.11.0",
-    "utf8": "^3.0.0",
-    "util": "^0.12.4",
-    "webpack": "^5.73.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.9.2"
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.11.41",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.7.4",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@tsconfig/create-react-app": "^1.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint": ">=5.16.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.7.1"
   }
 }
