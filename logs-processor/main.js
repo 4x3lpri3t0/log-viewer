@@ -5,11 +5,12 @@ const fs = require("fs");
 var config = require("./config").config;
 
 var init = async function () {
+  // Sessions db
   await nano.db
-    .get(config.couch_db_name)
+    .get(config.couch_db_sessions_name)
     .catch((err) => {
       if (err.error == "not_found") {
-        nano.db.create(config.couch_db_name);
+        nano.db.create(config.couch_db_sessions_name);
       } else {
         console.log(err);
         console.log("Is CouchDB running locally?");
@@ -17,7 +18,25 @@ var init = async function () {
       }
     })
     .finally(() => {
-      console.log(config.couch_db_name + " database ready to be used.");
+      console.log(
+        config.couch_db_sessions_name + " database ready to be used."
+      );
+    });
+
+  // Logs db
+  await nano.db
+    .get(config.couch_db_logs_name)
+    .catch((err) => {
+      if (err.error == "not_found") {
+        nano.db.create(config.couch_db_logs_name);
+      } else {
+        console.log(err);
+        console.log("Is CouchDB running locally?");
+        throw err;
+      }
+    })
+    .finally(() => {
+      console.log(config.couch_db_logs_name + " database ready to be used.");
 
       // Get file names under /logs directory
       const files = fs.readdirSync(config.raw_log_files_dir);
@@ -28,22 +47,49 @@ var init = async function () {
           `${config.raw_log_files_dir}/${fileName}`,
           parser.logParser,
           saveToDatabase,
-          sessionId
+          String(sessionId)
         );
       }
     });
 };
 
-var saveToDatabase = async function (logs, sessionId) {
+var saveToDatabase = async function (logParseResult, sessionId) {
+  const logs = logParseResult.logs;
+
   console.log(`Session ${sessionId} - Saving ${logs.length} logs to database.`);
 
-  const logsDatabase = nano.db.use(config.couch_db_name);
+  // Insert to session db
+  const sessionsDatabase = nano.db.use(config.couch_db_sessions_name);
+  let sessionDoc = {
+    _id: sessionId,
+    sessionStartDate: logParseResult.minDate,
+    sessionEndDate: logParseResult.maxDate,
+    sessionDurationSeconds: logParseResult.sessionDurationSeconds,
+  };
+  await sessionsDatabase
+    .insert(sessionDoc)
+    .then(() => {
+      console.log(
+        `Session ${sessionId} - Successfully saved session to database.`
+      );
+    })
+    .catch((err) => {
+      if (err.error == "conflict") {
+        console.log(
+          `Session ${sessionId} - Session already exists in database.`
+        );
+      } else {
+        console.log(`Session ${sessionId} - Error saving session to database.`);
+        console.log(err);
+        throw err;
+      }
+    });
 
+  // Batch insert to logs db
+  const logsDatabase = nano.db.use(config.couch_db_logs_name);
   let docs = {
     docs: logs,
   };
-
-  // Batch insert
   await logsDatabase
     .bulk(docs)
     .then((response) => {

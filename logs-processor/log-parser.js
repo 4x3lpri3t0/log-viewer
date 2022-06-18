@@ -9,6 +9,9 @@ exports.logParser = function (msg, sessionId) {
   let log = {};
   let line = null;
 
+  let maxDate = new Date(-8640000000000000);
+  let minDate = new Date(8640000000000000);
+
   while ((line = lines.shift()) !== undefined) {
     if (line === "") {
       continue;
@@ -33,13 +36,33 @@ exports.logParser = function (msg, sessionId) {
       }
       log["text"] = text;
       logs.push(log);
+
+      // Date formatting ('24-07-2017 21:02:15:595' -> '2017-07-24T21:02:15.595Z')
+      // TODO: Find a more performant way to do this.
+      let rawDate = log["date"].split(" ");
+      let parsedDate = rawDate[0]
+        .split("-")
+        .reverse()
+        .join("-")
+        .concat("T" + rawDate[1]);
+      const lastIndex = parsedDate.lastIndexOf(":");
+      const replacement = ".";
+      parsedDate =
+        parsedDate.substring(0, lastIndex) +
+        replacement +
+        parsedDate.substring(lastIndex + 1);
+
+      // Update session date info
+      let date = new Date(parsedDate);
+      minDate = Math.min(date, minDate);
+      maxDate = Math.max(date, maxDate);
     } else {
       // A line that is part of last log message. Needs to be appended to previous text blob.
       log["text"] += "\n" + line;
     }
   }
 
-  return logs;
+  return { logs, minDate, maxDate };
 };
 
 /*
@@ -52,8 +75,13 @@ exports.processLogs = function (file, parserFunction, saveFunction, sessionId) {
       return sys.error(read_error);
     }
 
-    let parsedLogs = parserFunction(content, sessionId);
+    let logParseResult = parserFunction(content, sessionId);
 
-    saveFunction(parsedLogs, sessionId);
+    // Add delta
+    logParseResult.sessionDurationSeconds = new Date(
+      logParseResult.maxDate - logParseResult.minDate
+    ).getSeconds();
+
+    saveFunction(logParseResult, sessionId);
   });
 };

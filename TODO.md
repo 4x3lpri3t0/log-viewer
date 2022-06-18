@@ -10,11 +10,7 @@ Each file is 1 session.
 - [ ] for a certain amount of sessions (let's say the amount is dictated between 2 dates/times), we would like to see:
   - [ ] top 10 most occurring log entries
   - [ ] the top 10 entries that occur most across all sessions
-- [ ] we would like to see entries that are new since a certain date/time, so the first occurrence of that log entry should be after that specific date/time. The error cannot have occurred before the given date/time
-
-# TODO
-- [ ] Parallelize the parsing of the log files.
-- [ ] Batch insert to CouchDB.
+<!-- - [ ] we would like to see entries that are new since a certain date/time, so the first occurrence of that log entry should be after that specific date/time. The error cannot have occurred before the given date/time -->
 
 # My NOTES:
 
