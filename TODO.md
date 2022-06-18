@@ -5,9 +5,9 @@
 Each file is 1 session.
 
 Using the logs -> complete the following:
-- [ ] parse sessions via script
-- [ ] get information out of them
-- [ ] put -> SQL database
+- [X] parse sessions via script
+- [X] get information out of them
+- [X] put -> SQL database
 - [ ] display results: very basic website (aesthetics don't matter)
 
 The entries in the log files should be able to be parsed with a line parser (it's not xml or json).
