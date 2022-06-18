@@ -1,0 +1,39 @@
+{
+    "parser": "babel-eslint",
+    "plugins": [
+        "react",
+        "react-redux"
+    ],
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react-redux/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+          "jsx": true,
+          "modules": true
+        }
+    },
+    "rules": {
+        "react/prop-types": "off",
+        "react/jsx-uses-vars": "error",
+        "react-redux/connect-prefer-named-arguments": "off"
+    },
+    "globals": {
+        "WP_CONF_BASE_URL": "readonly",
+        "WP_CONF_REMOTE_DB_URL": "readonly",
+        "WP_CONF_REMOTE_DB_NAME": "readonly"
+    },
+    "settings": {
+        "react": {
+            "version": "latest"
+        }
+    }
+}
