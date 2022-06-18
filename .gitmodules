@@ -1,3 +1,0 @@
-[submodule "lib/node-couchdb-min"]
-	path = lib/node-couchdb-min
-	url = git://github.com/zedronar/node-couchdb-min.git

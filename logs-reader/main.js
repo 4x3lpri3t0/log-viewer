@@ -22,7 +22,7 @@ app.listen(port, () => {
 });
 
 const nano = require("nano")("http://admin:admin@127.0.0.1:5984"), // Not for production use :)
-  per_page = 10,
+  per_page = 50, // TODO: Make it a query string parameter
   params = { include_docs: true, limit: per_page, descending: true };
 
 var config = require("./config").config;
@@ -46,9 +46,6 @@ var init = async function () {
 
 var readFromDatabase = async function (callback) {
   const logsDatabase = nano.db.use(config.couch_db_name);
-
-  // TODO: Batch read
-  //   for (const log of sessions[i]) {
   await logsDatabase
     .list(params)
     .then((response) => {

@@ -9,16 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Zedronar/log-viewer.git"
-  },
   "author": "Axel Prieto",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Zedronar/log-viewer/issues"
-  },
-  "homepage": "https://github.com/Zedronar/log-viewer#readme",
   "dependencies": {
     "http": "^0.0.1-security",
     "nano": "^10.0.0",

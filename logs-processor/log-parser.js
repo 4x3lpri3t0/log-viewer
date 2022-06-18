@@ -52,7 +52,7 @@ exports.logParser = function (msg, sessionId) {
         replacement +
         parsedDate.substring(lastIndex + 1);
 
-      // Update session date info
+      // Update session date info.
       let date = new Date(parsedDate);
       minDate = Math.min(date, minDate);
       maxDate = Math.max(date, maxDate);
@@ -65,10 +65,6 @@ exports.logParser = function (msg, sessionId) {
   return { logs, minDate, maxDate };
 };
 
-/*
- * Parser Dispatcher
- */
-// Takes file path, log process function, save log function, and session id
 exports.processLogs = function (file, parserFunction, saveFunction, sessionId) {
   fs.readFile(file, "utf8", function (read_error, content) {
     if (read_error) {
