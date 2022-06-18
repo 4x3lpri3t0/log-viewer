@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 
 const fs = require("fs");
-const sys = require("sys");
 const debug = false;
 
-exports.logParser = function (msg) {
+exports.logParser = function (msg, sessionId) {
   const lines = msg.split(/\n/);
   let logs = [];
   let log = {};
@@ -22,6 +21,7 @@ exports.logParser = function (msg) {
     ) {
       log = {};
       tmp = line.match(/((?<=\[).+?(?=\]))/g);
+      log["sessionId"] = sessionId;
       log["date"] = tmp[0];
       metadata = tmp[1].split(/\s+/);
       log["file"] = metadata[0];
@@ -45,38 +45,15 @@ exports.logParser = function (msg) {
 /*
  * Parser Dispatcher
  */
-// Takes file path, log process function and save log function
+// Takes file path, log process function, save log function, and session id
 exports.processLogs = function (file, parserFunction, saveFunction, sessionId) {
   fs.readFile(file, "utf8", function (read_error, content) {
     if (read_error) {
       return sys.error(read_error);
     }
 
-    let parsedLogs = parserFunction(content);
+    let parsedLogs = parserFunction(content, sessionId);
 
     saveFunction(parsedLogs, sessionId);
   });
-};
-
-/*
- * Utility Functions
- */
-exports.setDebug = function (val) {
-  debug = !!val;
-};
-
-exports.isDebug = function () {
-  return debug;
-};
-
-exports.dateToArray = function (dateObj) {
-  if (typeof dateObj !== "object") dateObj = new Date(dateObj);
-  return [
-    dateObj.getFullYear(),
-    dateObj.getMonth() + 1,
-    dateObj.getDate(),
-    dateObj.getHours(),
-    dateObj.getMinutes(),
-    dateObj.getSeconds(),
-  ];
 };

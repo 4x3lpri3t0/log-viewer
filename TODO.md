@@ -4,16 +4,6 @@
 
 Each file is 1 session.
 
-Using the logs -> complete the following:
-- [X] parse sessions via script
-- [X] get information out of them
-- [X] put -> SQL database
-- [ ] display results: very basic website (aesthetics don't matter)
-
-The entries in the log files should be able to be parsed with a line parser (it's not xml or json).
-
-A log entry contains a timestamp, file, line, function, and a blob of text (that can contain newlines).
-
 # Additional requirements:
 
 - [ ] a log should be able to be linked to a session (id, date, duration)

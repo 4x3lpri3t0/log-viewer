@@ -27,8 +27,12 @@ function App() {
   const columns = React.useMemo(
     () => [
       {
+        Header: 'Session Id',
+        accessor: 'doc.sessionId',
+      },
+      {
         Header: 'Date',
-        accessor: 'doc.date', // accessor is the "key" in the data
+        accessor: 'doc.date',
       },
       {
         Header: 'File',
