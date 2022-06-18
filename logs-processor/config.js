@@ -1,4 +1,4 @@
 exports.config = {
-  file: "./logs/test_log.txt",
+  raw_log_files_dir: "./logs/",
   couch_db_name: "logs",
 };

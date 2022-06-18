@@ -34,6 +34,18 @@ function App() {
         Header: 'File',
         accessor: 'doc.file',
       },
+      {
+        Header: 'Line',
+        accessor: 'doc.line',
+      },
+      {
+        Header: 'Function',
+        accessor: 'doc.function',
+      },
+      {
+        Header: 'Text',
+        accessor: 'doc.text',
+      },
     ],
     [],
   );

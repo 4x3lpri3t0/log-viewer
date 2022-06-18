@@ -1,4 +1,0 @@
-{
-  "remote_db_url_dev": "http://admin:admin@127.0.0.1:5984",
-  "remote_db_name_dev": "logs"
-}
