@@ -24,15 +24,16 @@ Sessions db:
 - sessionEndDate
 - sessionDurationSeconds
 
-## Running logs-processor Locally
+## Running Locally
 
+### logs-processor
 ```sh
 $ cd logs-processor
 $ yarn
 $ node main
 ```
 
-## Running logs-reader Locally
+### logs-reader
 
 ```sh
 $ cd logs-reader
@@ -40,7 +41,7 @@ $ yarn
 $ node main
 ```
 
-## Running frontend Locally
+### frontend
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -54,14 +55,11 @@ $ yarn start # runs the app in the dev mode
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits. You will also see any lint errors in the console.
 
-## Running CouchDB Locally
+### couch
 
-Requirements:
-* CouchDB
-  - Installation guide: https://docs.couchdb.org/en/3.2.0/install/index.html
-  - Enable CORS using the Fauxton web interface: http://localhost:5984/_utils/#_config/couchdb@localhost/cors
-
-Check DB status after installation:
+- CouchDB installation guide: https://docs.couchdb.org/en/3.2.0/install/index.html
+- Enable CORS using the Fauxton web interface: http://localhost:5984/_utils/#_config/couchdb@localhost/cors
+- Check DB status after installation:
 ```sh
 $ curl -X GET http://admin:admin@127.0.0.1:5984/_users
 ```
